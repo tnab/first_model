@@ -7,8 +7,8 @@ include: "*.view"
 include: "*.dashboard"
 
 datagroup: first_model_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "4 hours"
 }
 
 persist_with: first_model_default_datagroup
@@ -54,6 +54,8 @@ explore: order_items {
     relationship: many_to_one
   }
 }
+
+explore: sql_runner_query_pdt_test {}
 
 explore: orders {
   join: users {

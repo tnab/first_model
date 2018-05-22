@@ -23,6 +23,7 @@ view: user_data {
     sql: ${TABLE}.user_id ;;
   }
 
+
   measure: count {
     type: count
     drill_fields: [id, users.first_name, users.last_name, users.id]
