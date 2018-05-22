@@ -55,6 +55,8 @@ explore: order_items {
   }
 }
 
+explore: sql_runner_query_pdt_test {}
+
 explore: orders {
   join: users {
     type: left_outer
