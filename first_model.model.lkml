@@ -4,7 +4,7 @@ connection: "thelook"
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+# include: "*.dashboard"
 
 datagroup: first_model_default_datagroup {
   sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -51,7 +51,7 @@ explore: order_items {
 
   join: products2 {
     from: products
-    sql_on:  ${inventory_items.product_id} = ${products2.id}  ;;
+    sql_on:  ${inventory_items.product_id} = ${products2.id} +1  ;;
     relationship: many_to_one
   }
 

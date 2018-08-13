@@ -46,4 +46,10 @@ view: products {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
   }
+
+  measure: sum_retail_price {
+    type: sum
+    sql: ${retail_price} ;;
+    value_format: "0.##"
+  }
 }
